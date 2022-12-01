@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+
+	<head>
+		<title> Login </title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css\common.css' %}" />
+	</head>
+
+	<body>
+		<div id="content">
+
+			<form action="../login_cred_check/", method="POST">
+
+				{% csrf_token %}
+				<div id="text" name="header">
+					Login
+				</div>
+
+				<div id="form_item">
+					<div id="text"> Username </div> <br>
+					<input type="text" name="username" /> <br>
+				</div>
+				<div id="form_item">
+					<div id="text"> Password </div> <br>
+					<input type="password" name="password" /> <br>
+				</div>
+				<div id="form_item">
+					<input type="submit" name="submit" value="Login" /> <br>
+				</div>
+				<br>
+				<a href="../register/"> Don't have an account? </a> <br>
+
+			</form>
+
+		</div>
+
+	</body>
+
+</html>

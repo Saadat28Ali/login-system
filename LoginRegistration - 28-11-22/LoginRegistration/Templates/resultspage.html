@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+	<head>
+		<title> Results </title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css\common.css' %}" />
+	</head>
+	<body>
+		<div id="content">
+			<div id="text" name="header">
+				Results <br>
+			</div>
+			<div id="text">
+				{% for item in content_line_list %}
+					{{ item }} <br>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>
